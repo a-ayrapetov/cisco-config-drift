@@ -1,0 +1,10 @@
+﻿inventory.csv
+baselines/
+reports/
+logs/
+__pycache__/
+.pytest_cache/
+
+dist/
+build/
+*.egg-info/
