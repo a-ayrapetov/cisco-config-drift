@@ -1,6 +1,6 @@
 # cisco-config-drift
 
-[![ci](https://github.com/a-ayrapetov/cisco-config-drift/actions/workflows/ci.yml/badge.svg)](https://github.com/a-ayrapetov/cisco-config-drift/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/cisco-config-drift)](https://pypi.org/project/cisco-config-drift/)
+[![ci](https://github.com/a-ayrapetov/cisco-config-drift/actions/workflows/ci.yml/badge.svg)](https://github.com/a-ayrapetov/cisco-config-drift/actions/workflows/ci.yml)
 
 Read-only configuration drift detection for Cisco IOS and IOS-XE. Save an approved baseline of every device's running-config, then check on a schedule and get a clean diff of anything that changed outside change control.
 
