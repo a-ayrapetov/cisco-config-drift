@@ -4,6 +4,21 @@
 
 Read-only configuration drift detection for Cisco IOS and IOS-XE. Save an approved baseline of every device's running-config, then check on a schedule and get a clean diff of anything that changed outside change control.
 
+## When to run it
+
+```mermaid
+flowchart LR
+  R([Approved state]) --> S[drift.py snapshot] --> C[drift.py check<br/>on a schedule] --> D1{DP 1}
+  D1 -->|no drift| C
+  D1 -->|drift with a<br/>change ticket| A([Review the diff,<br/>snapshot again])
+  D1 -->|drift without<br/>a ticket| I([Unauthorized change:<br/>investigate])
+
+  style R fill:#1f6feb,color:#fff,stroke:none
+  style D1 fill:#6e40c9,color:#fff,stroke:none
+  style A fill:#1a7f37,color:#fff,stroke:none
+  style I fill:#cf222e,color:#fff,stroke:none
+```
+
 ## Why
 
 Unauthorized or forgotten changes are a common root cause of outages and a common audit finding (NIST 800-53 CM-3 and CM-6, CIS Control 4, IEC 62443 SR 7.6). This tool answers "did anything change on the switches since the last approved state?" without touching the devices.
