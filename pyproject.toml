@@ -9,7 +9,7 @@ description = "Read-only configuration drift detection for Cisco IOS / IOS-XE"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 authors = [{ name = "Arkadiy Ayrapetov" }]
 dependencies = ["netmiko>=4.3"]
 keywords = ["cisco", "ios-xe", "netmiko", "configuration", "drift", "audit"]
